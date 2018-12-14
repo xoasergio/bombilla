@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Evento</title>
+		<meta charset="UTF-8">
+		<style> body{text-align:center;} </style>
+		<script type="text/javascript">
+			function encender() {
+				img.src="bombilla_on.jpg"
+			}
+			function apagar() {
+				img.src="bombilla_off.jpg"
+			}
+			function inicializar() {
+				var img = document.getElementById("i1");
+				img.ondblclick = apagar;
+				img.onclick = encender;
+			}
+		</script>
+	</head>	
+	<body onload="inicializar()">
+		<h1>Evento</h1>
+		<img name="img" src="bombilla_off.jpg" id="i1"/>
+	</body>
+</html>
